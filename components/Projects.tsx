@@ -1,19 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
-import ScrollReveal from './ScrollReveal'; // Import the reusable animator
+import ScrollReveal from './ScrollReveal';
 
 const Projects = () => {
   const projects = [
-<<<<<<< HEAD
-   
-=======
     {
       title: "Papaya School",
       description: "Our flagship school providing quality education to underprivileged children in Payatas, Manila.",
       image: "/images/project1.jpg",
       link: "/projects/papaya-school"
     },
->>>>>>> 58679f06028c61014437a4f961917e6f6127e575
     {
       title: "Apple Scholarships",
       description: "Scholarship program supporting high-potential students through secondary and tertiary education.",
@@ -40,11 +36,7 @@ const Projects = () => {
         </ScrollReveal>
 
         {/* PROJECTS GRID - WAVE ANIMATION */}
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-=======
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
->>>>>>> 58679f06028c61014437a4f961917e6f6127e575
           {projects.map((project, index) => (
             <ScrollReveal 
               key={index} 

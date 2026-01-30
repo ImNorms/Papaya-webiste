@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import ScrollReveal from './ScrollReveal'; // Import the reusable animator
+import ScrollReveal from './ScrollReveal';
 
 const WhatWeDo = () => {
   return (
@@ -21,13 +21,7 @@ const WhatWeDo = () => {
             {/* Paragraph: Fades up after the title */}
             <ScrollReveal animation="fade-up" delay={200}>
               <p className="text-gray-700 mb-8 text-lg leading-relaxed">
-<<<<<<< HEAD
                 Papaya Academy is a private charity school in Rodriguez (Montalban), Rizal. It Offers not just quality education but also free lunch, transportation, books, uniforms, school supplies, free tuition and educational tours for the less fortunate children. We provide education to impoverished elementary students around Payatas dump and Rodriguez, Rizal
-=======
-                Papaya Academy is dedicated to providing quality education to underprivileged children in the Philippines. 
-                Our mission is to break the cycle of poverty through education, offering comprehensive learning programs 
-                that empower children to build a better future for themselves and their communities.
->>>>>>> 58679f06028c61014437a4f961917e6f6127e575
               </p>
             </ScrollReveal>
 
@@ -48,16 +42,20 @@ const WhatWeDo = () => {
             <ScrollReveal animation="slide-right" delay={200}>
               <div className="bg-gray-200 rounded-lg overflow-hidden aspect-video shadow-lg relative group">
                 <div className="w-full h-full flex items-center justify-center bg-gray-800 text-white transition-colors duration-500 group-hover:bg-gray-700">
-                  <div className="text-center p-8">
-                    <div className="text-4xl mb-4 opacity-50 group-hover:opacity-100 transition-opacity duration-300">▶</div>
-                    <div className="text-2xl mb-4 font-semibold">Video Coming Soon</div>
-                    <p className="text-gray-300">We're working on our story video</p>
+                  <div className="text-center">
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-white/20 flex items-center justify-center">
+                      <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
+                    </div>
+                    <p className="text-lg font-medium">Watch Our Story</p>
+                    <p className="text-sm opacity-75">Learn more about Papaya Academy</p>
                   </div>
                 </div>
               </div>
             </ScrollReveal>
           </div>
-
+          
         </div>
       </div>
     </section>
