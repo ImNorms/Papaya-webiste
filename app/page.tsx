@@ -3,9 +3,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
+<<<<<<< HEAD
 import Header from '../components/Header';
 import WhatWeDo from '../components/WhatWeDo';
 import Projects from '../components/Projects';
+=======
+import WhatWeDo from '../components/WhatWeDo';
+import Projects from '../components/Projects';
+import ImpactMetrics from '../components/ImpactMetrics';
+>>>>>>> 58679f06028c61014437a4f961917e6f6127e575
 import DonationSection from '../components/DonationSection';
 import Gallery from '../components/Gallery';
 import GetInvolved from '../components/GetInvolved';
@@ -77,6 +83,10 @@ export const ScrollReveal = ({
 // --- 3. MAIN PAGE COMPONENT ---
 export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+<<<<<<< HEAD
+=======
+  const [isHovered, setIsHovered] = useState(false);
+>>>>>>> 58679f06028c61014437a4f961917e6f6127e575
   const images = ['/images/1.jpg', '/images/3.jpg', '/images/jeep.jpg'];
 
   useEffect(() => {
@@ -86,9 +96,60 @@ export default function Home() {
     return () => clearInterval(interval);
   }, [images.length]);
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Header />
+=======
+  const scrollToDonate = () => {
+    const donateSection = document.getElementById('donate-section');
+    if (donateSection) {
+      donateSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  return (
+    <div className="min-h-screen flex flex-col overflow-x-hidden">
+      
+      {/* HEADER */}
+      <header className={`bg-papaya-green text-white ${montserrat.className} relative z-50`}>
+        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+          
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-white">
+              <Image src="/images/papaya.jpg" alt="Logo" width={40} height={40} className="object-cover w-full h-full"/>
+            </div>
+            <h1 className="text-xl md:text-2xl font-bold tracking-wide">Papaya Academy, Inc.</h1>
+          </div>
+          
+          <nav className="hidden md:flex space-x-8 items-center">
+            <Link href="/" className="nav-link text-base font-medium hover:text-[#F2C94C] transition-colors">Home</Link>
+            <AboutDropdown />
+            <Link href="/programs" className="nav-link text-base font-medium hover:text-[#F2C94C] transition-colors">Programs</Link>
+            <Link href="/news" className="nav-link text-base font-medium hover:text-[#F2C94C] transition-colors">News</Link>
+            <Link href="/contact" className="nav-link text-base font-medium hover:text-[#F2C94C] transition-colors">Contact</Link>
+          </nav>
+          
+          {/* DONATE BUTTON */}
+          <button
+            onClick={scrollToDonate}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            className="px-8 py-2.5 rounded-md font-bold text-sm tracking-widest border border-[#F2C94C] shadow-md transition-shadow duration-300"
+            style={{
+              backgroundImage: 'linear-gradient(to top, #F2C94C 50%, #1B3E2A 50%)',
+              backgroundSize: '100% 200%',
+              backgroundPosition: isHovered ? 'bottom' : 'top',
+              color: isHovered ? '#1B3E2A' : '#F2C94C',
+              boxShadow: isHovered ? '0 6px 20px rgba(242,201,76,0.8)' : '0 4px 14px 0 rgba(242,201,76,0.5)',
+              transition: 'background-position 0.4s ease-out, color 0.3s ease, box-shadow 0.3s ease'
+            }}
+          >
+            DONATE
+          </button>
+        </div>
+      </header>
+>>>>>>> 58679f06028c61014437a4f961917e6f6127e575
 
       {/* HERO SECTION - ANIMATIONS KEPT HERE (Per Element) */}
       <section className="flex-grow relative bg-gray-900 text-white min-h-[600px] flex items-center">
@@ -142,6 +203,7 @@ export default function Home() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* What We Do Section with Success Stories */}
       <div id="what-we-do" className="w-full">
         <WhatWeDo />
@@ -331,6 +393,17 @@ export default function Home() {
           </div>
         </div>
       </section>
+=======
+      {/* SECTIONS - ANIMATION REMOVED (Static/Plain) */}
+      
+      <div id="impact-metrics" className="w-full">
+        <ImpactMetrics />
+      </div>
+
+      <div id="what-we-do" className="w-full">
+        <WhatWeDo />
+      </div>
+>>>>>>> 58679f06028c61014437a4f961917e6f6127e575
 
       <div id="projects" className="w-full">
         <Projects />

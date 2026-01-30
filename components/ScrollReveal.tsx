@@ -2,7 +2,11 @@
 
 import { useState, useEffect, useRef } from 'react';
 
+<<<<<<< HEAD
 type AnimationType = 'fade-up' | 'fade-down' | 'fade-right' | 'slide-left' | 'slide-right' | 'zoom-in';
+=======
+type AnimationType = 'fade-up' | 'fade-down' | 'slide-left' | 'slide-right' | 'zoom-in';
+>>>>>>> 58679f06028c61014437a4f961917e6f6127e575
 
 interface ScrollRevealProps {
   children: React.ReactNode;
@@ -38,7 +42,10 @@ const ScrollReveal = ({
     switch (animation) {
       case 'fade-up': return isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10';
       case 'fade-down': return isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10';
+<<<<<<< HEAD
       case 'fade-right': return isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10';
+=======
+>>>>>>> 58679f06028c61014437a4f961917e6f6127e575
       case 'slide-left': return isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10';
       case 'slide-right': return isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10';
       case 'zoom-in': return isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95 blur-sm';
